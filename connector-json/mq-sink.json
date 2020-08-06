@@ -1,0 +1,17 @@
+{
+	"name":"mq-sink01",
+	"config": {
+	    "connector.class":"com.ibm.eventstreams.connect.mqsink.MQSinkConnector",
+	    "tasks.max":"1",
+	    "mq.user.name":"admin", 
+	    "mq.password":"passw0rd", 
+	    "topics":"es-to-mq",
+	    "mq.queue.manager":"mq-qm",
+	    "mq.connection.name.list":"mq-e2e-ibm-mq.mq.svc(1414)",
+	    "mq.channel.name":"DEV.APP.SVRCONN",
+	    "mq.queue":"FROM.ES.TO.MQ",
+	    "mq.message.builder": "com.ibm.eventstreams.connect.mqsink.builders.DefaultMessageBuilder",
+	    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+	    "value.converter": "org.apache.kafka.connect.storage.StringConverter"
+    }
+}
