@@ -100,4 +100,4 @@ spec:
           name: connect-log4j-config
       - name: connect-jks
         secret:
-          name: connect-log4j-config
+          secretName: connect-jks
